@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Definición de la codificación de caracteres y viewport para diseño responsivo -->
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio</title>
+    <!-- Enlace a archivos CSS externos (Bootstrap y Font Awesome) para estilos y iconos -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+
+    <!-- Sección de encabezado con el nombre y la descripción del portafolio -->
+<header id="header" class="bg-primary text-white text-center py-3">
+    <h1 id="nombre">Gabriel Espinoza</h1>
+    <p id="descripcion">Estudiante de Ingeniería en Sistemas</p>
+</header>
+
+    <!-- Barra lateral de navegación con enlaces a diferentes secciones -->
+<div class="d-flex">
+    <nav id="sidebar" class="bg-dark text-white p-3" style="width: 100px;">
+        <ul class="nav flex-column">
+            <!-- Enlaces de navegación para cada sección con iconos de FontAwesome -->
+            <li class="nav-item">
+                <a href="#" class="nav-link text-white" onclick="mostrarSeccion('inicio')" title="Inicio">
+                    <i class="fas fa-home"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link text-white" onclick="mostrarSeccion('perfil')" title="Perfil">
+                    <i class="fas fa-user"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link text-white" onclick="mostrarSeccion('proyectos')" title="Proyectos">
+                    <i class="fas fa-folder"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link text-white" onclick="mostrarSeccion('habilidades')" title="Habilidades">
+                    <i class="fas fa-cogs"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link text-white" onclick="mostrarSeccion('contacto')" title="Contacto">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Contenido principal de las secciones -->
+    <main class="container content">
+        <!-- Sección de inicio -->
+        <section id="inicio" class="seccion">
+            <h2>Bienvenido a mi Portafolio</h2>
+            <p>Primer intento de portafolio Web, incluye toda la información necesaria sobre mis habilidades en el área de programación. Navega por las secciones usando la barra lateral para conocer más sobre mis proyectos, habilidades y formas de contacto.</p>
+        </section>
+
+        <!-- Sección de perfil con una foto y descripción -->
+        <section id="perfil" class="seccion d-none">
+            <h2>Sobre Mí</h2>
+            <img src="img/perfil3.jpg" alt="Foto de perfil" class="perfil-img rounded-circle mt-3">
+            <p class="mt-3">Soy Gabriel Espinoza, un estudiante de ingeniería en sistemas. Apasionado con la programación y resolución de problemas, aunque llevo pocos proyectos, poco a poco voy aumentando más.</p>
+
+            <!-- Enlaces a redes sociales -->
+            <div class="social-icons mt-4">
+                <a href="https://www.instagram.com/gabyesa845" class="btn btn-social-icon btn-instagram" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.tiktok.com/@gaby.esa" class="btn btn-social-icon btn-facebook" target="_blank">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+                <a href="https://github.com/GabyEsA" class="btn btn-social-icon btn-github" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- Sección de proyectos con tarjetas para cada uno -->
+        <section id="proyectos" class="seccion d-none">
+            <h2>Mis Proyectos</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Agenda de contactos WPF-C#</h5>
+                            <p class="card-text">Proyecto creado para la materia de Programación II, busca almacenar datos ingresados y guardarlos en documentos .txt para acceder fácilmente a ellos en cualquier momento.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Videojuego de carreras WPF-C#</h5>
+                            <p class="card-text">Proyecto creado para la materia de Programación II. Un videojuego sencillo sobre carreras de coches, donde puedes interactuar con tu vehículo, ganar monedas y más.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Menú para manejar archivos en WPF-C#</h5>
+                            <p class="card-text">Proyecto creado para la materia de Programación II, uno más sencillo que los anteriores, pues sirve para crear y editar archivos .txt desde consola.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de habilidades con lista de tecnologías -->
+        <section id="habilidades" class="seccion d-none">
+            <h2>Habilidades</h2>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">HTML y CSS</li>
+                <li class="list-group-item">JavaScript</li>
+                <li class="list-group-item">C#</li>
+                <li class="list-group-item">Bases de Datos SQL</li>
+            </ul>
+        </section>
+
+        <!-- Sección de contacto con formulario para enviar un mensaje -->
+        <section id="contacto" class="seccion d-none">
+            <h2>Contacto</h2>
+            <form id="formContacto" class="p-4 border rounded">
+                <!-- Campos del formulario: nombre, correo y mensaje -->
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="correo">Correo Electrónico</label>
+                    <input type="email" class="form-control" id="correo" name="correo" required>
+                </div>
+                <div class="form-group">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea class="form-control" id="mensaje" name="mensaje" rows="4" required></textarea>
+                </div>
+                <button type="button" class="btn btn-primary" onclick="guardarFormulario()">Enviar</button>
+            </form>
+        </section>
+    </main>
+</div>
+
+<!-- Sección de pie de página -->
+<footer id="footer" class="bg-dark text-white text-center py-3">
+    <p>&copy; 2024 Mi Portafolio. Derechos reservados.</p>
+</footer>
+
+<!-- Scripts de jQuery y Bootstrap -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<!-- Funciones JavaScript para manejar la visualización de secciones y el formulario -->
+<script>
+    // Función para mostrar la sección seleccionada y ocultar las demás
+    function mostrarSeccion(seccionId) {
+        let secciones = document.querySelectorAll('.seccion');
+        secciones.forEach(function(seccion) {
+            seccion.classList.add('d-none');
+        });
+        document.getElementById(seccionId).classList.remove('d-none');
+    }
+
+    // Función para guardar el formulario de contacto
+    function guardarFormulario() {
+        let nombre = document.getElementById('nombre').value;
+        let correo = document.getElementById('correo').value;
+        let mensaje = document.getElementById('mensaje').value;
+
+        // Verifica que todos los campos estén completos
+        if (nombre && correo && mensaje) {
+            alert("Formulario guardado correctamente!");
+        } else {
+            alert("Por favor, complete todos los campos.");
+        }
+    }
+</script>
+
+</body>
+</html>
